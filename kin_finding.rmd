@@ -1,0 +1,10 @@
+---
+title: "Study design"
+bibliography: master_bib.bib
+link-citations: true
+csl: biomed-central.csl
+---
+
+This is a place holder for "basic" information about CKMR kin finding; any examples (code, case studies) can be put in under the Examples design tab
+
+
