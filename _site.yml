@@ -1,24 +1,10 @@
-name: "The Close KinGdom"
-title: "The Close KinGdom"
+name: "Paul B. Conn"
+title: "Paul B Conn"
 description: Dummy website
-author: Paul Conn, Mark Bravington, Hans Skaug, Eric Anderson, and Jay Ver Hoef
+author: Paul Conn
 output_dir: "."
 navbar:
-  left:
-    - text: "About"
-      href: about.html
-    - text: "References"
-      href: refs.html
   right:
-    - text: "Modeling"
-      href: estimation.html
-    - text: "Design"
-      href: design.html
-    - text: "Examples"
-      menu:
-        - text: "Study design"
-        - text: "Kin finding"
-        - text: "Demography estimation"
-          href: examples_estimation.html
-    - text: "Kin finding"
+    - text: "CV"
+      href: CV4.html
 output: distill::distill_article

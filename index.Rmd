@@ -1,21 +1,9 @@
 ---
-title: "The Close KinGdom"
-description: Welcome to a nascent site about using Close-Kin Mark Recapture (CKMR) to estimate demographic parameters from fish and wildlife populations.
+title: "Paul B. Conn"
+description: Welcome to a nascent site I built to share my CV and link to various recent projects
 site: distill::distill_website
 ---
 
 
 
-We will be building this site out over the next several months, intending
-to place a whole series of examples that will let researchers and managers
-new to CKMR familiarize themselves with its principles and practice, and to learn how to code CKMR models in R and TMB 
-
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-
-# Learn more about creating websites with Distill at:
-# https://rstudio.github.io/distill/website.html
-
-```
-
-<img src="images/CKMR_intro_diagram.png" style="width:100%">
+<img src="images/smi_bino.jpg" style="width:100%">
