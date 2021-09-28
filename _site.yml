@@ -2,7 +2,7 @@ name: "The Close KinGdom"
 title: "The Close KinGdom"
 description: Dummy website
 author: Paul Conn, Mark Bravington, Hans Skaug, Eric Anderson, and Jay Ver Hoef
-output_dir: "_site"
+output_dir: "."
 navbar:
   left:
     - text: "About"

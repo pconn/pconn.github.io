@@ -234,7 +234,7 @@ One computational issue that can arise with this approach is that $p$ can go to 
 n_no_match_HS = n_comp_bibj-n_match_HS_bibj
 n_no_match_PO = n_comp_bidibj-n_match_PO_bidibj
 Data=Data_orig=list(n_match_HS_bibj=n_match_HS_bibj,n_no_match_HS=n_no_match_HS,n_match_PO_bidibj=n_match_PO_bidibj,n_no_match_PO=n_no_match_PO,nyrs=nyrs,t_start=t_start,am=am)
-Par_start = c(logit(phi),log(10000),0.0)
+Par_start = c(log(phi/(1-phi)),log(10000),0.0)
 Start_time = Sys.time()
 Opt = optimx::optimx(par=Par_start,fn=nll.fun,hessian=TRUE,method="BFGS",Data=Data)
 End_time = Sys.time()
@@ -302,7 +302,7 @@ For fun (and to assess the overall performance of this model over and above a si
     n_no_match_HS = n_comp_bibj-n_match_HS_bibj
     n_no_match_PO = n_comp_bidibj-n_match_PO_bidibj
     Data=list(n_match_HS_bibj=n_match_HS_bibj,n_no_match_HS=n_no_match_HS,n_match_PO_bidibj=n_match_PO_bidibj,n_no_match_PO=n_no_match_PO,nyrs=nyrs,t_start=t_start,am=am)
-    Par_start = c(logit(phi),log(10000),0.0)
+    Par_start = c(log(phi/(1-phi)),log(10000),0.0)
     Opt = optimx::optimx(par=Par_start,fn=nll.fun,hessian=TRUE,method="BFGS",Data=Data)
     Phi_est[isim]=plogis(Opt$p1)
     Lambda_est[isim] = 0.9+0.2*plogis(Opt$p3)
@@ -341,7 +341,7 @@ I've saved the .cpp file for the likelihood calculation [here](./TMB_cpp/adults_
   
   Data=list("nyrs"=nyrs,"t_start"=t_start-1,"am"=am,"n_match_HS_bibj"=n_match_HS_bibj,"n_comp_HS_bibj"=n_comp_bibj,"n_match_PO_bidibj"=n_match_PO_bidibj,"n_comp_PO_bidibj"=n_comp_bidibj)  #recall vectors in C++ start at zero so t_start-1
   
-  Params = list("phi_logit"=logit(0.5),"N0_trans"=log(5000),"lambda_trans"=0) #intial param values
+  Params = list("phi_logit"=0,"N0_trans"=log(5000),"lambda_trans"=0) #intial param values
    
   Map = list()  #specify fixed parameter values
   Random=NULL  #specify which params are random effects to be integrated out with Laplace Approx
