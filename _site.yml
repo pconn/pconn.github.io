@@ -6,5 +6,5 @@ output_dir: "."
 navbar:
   right:
     - text: "CV"
-      href: CV_wrapper.html
+      href: <embed src="https://pconn.github.io/CV.pdf" width="600px" height="500px" />
 output: distill::distill_article
